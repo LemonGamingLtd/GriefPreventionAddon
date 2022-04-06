@@ -1,7 +1,6 @@
 package addon.brainsynder.griefprevention;
 
 import addon.brainsynder.griefprevention.config.Options;
-import com.google.common.collect.Lists;
 import me.ryanhamshire.GriefPrevention.Claim;
 import me.ryanhamshire.GriefPrevention.GriefPrevention;
 import me.ryanhamshire.GriefPrevention.PlayerData;
@@ -9,20 +8,17 @@ import org.bukkit.Bukkit;
 import org.bukkit.Location;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.EventPriority;
-import org.bukkit.event.Listener;
 import org.bukkit.event.entity.CreatureSpawnEvent;
 import org.bukkit.plugin.Plugin;
 import simplepets.brainsynder.addon.AddonConfig;
-import simplepets.brainsynder.addon.presets.RegionAddon;
+import simplepets.brainsynder.addon.presets.RegionModule;
 import simplepets.brainsynder.api.Namespace;
 import simplepets.brainsynder.api.plugin.SimplePets;
 import simplepets.brainsynder.api.user.PetUser;
 import simplepets.brainsynder.debug.DebugLevel;
 
-import java.util.List;
-
 @Namespace(namespace = "GriefPrevention")
-public class GriefPreventionAddon extends RegionAddon {
+public class GriefPreventionAddon extends RegionModule {
 
     @Override
     public boolean shouldEnable() {
@@ -33,26 +29,6 @@ public class GriefPreventionAddon extends RegionAddon {
             return false;
         }
         return true;
-    }
-
-    @Override
-    public double getVersion() {
-        return 0.1;
-    }
-
-    @Override
-    public String getAuthor() {
-        return "brainsynder";
-    }
-
-    @Override
-    public List<String> getDescription() {
-        return Lists.newArrayList(
-                "&7This addon links into",
-                "&7GriefPrevention so you can",
-                "&7stop specific pet events from",
-                "&7occurring when on/off claims"
-        );
     }
 
     @Override
