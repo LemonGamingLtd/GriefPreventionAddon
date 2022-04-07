@@ -4,32 +4,18 @@ import addon.brainsynder.griefprevention.config.Options;
 import me.ryanhamshire.GriefPrevention.Claim;
 import me.ryanhamshire.GriefPrevention.GriefPrevention;
 import me.ryanhamshire.GriefPrevention.PlayerData;
-import org.bukkit.Bukkit;
 import org.bukkit.Location;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.EventPriority;
 import org.bukkit.event.entity.CreatureSpawnEvent;
-import org.bukkit.plugin.Plugin;
 import simplepets.brainsynder.addon.AddonConfig;
 import simplepets.brainsynder.addon.presets.RegionModule;
 import simplepets.brainsynder.api.Namespace;
 import simplepets.brainsynder.api.plugin.SimplePets;
 import simplepets.brainsynder.api.user.PetUser;
-import simplepets.brainsynder.debug.DebugLevel;
 
 @Namespace(namespace = "GriefPrevention")
 public class GriefPreventionAddon extends RegionModule {
-
-    @Override
-    public boolean shouldEnable() {
-        Plugin plugin = Bukkit.getPluginManager().getPlugin("GriefPrevention");
-        if (plugin == null) {
-            SimplePets.getDebugLogger().debug(DebugLevel.ERROR, "GriefPrevention wasn't found!");
-            SimplePets.getDebugLogger().debug(DebugLevel.ERROR, "Please download it from: https://www.spigotmc.org/resources/1884/");
-            return false;
-        }
-        return true;
-    }
 
     @Override
     public void loadDefaults(AddonConfig config) {

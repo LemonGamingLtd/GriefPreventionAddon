@@ -10,5 +10,12 @@
     "&7GriefPrevention so you can",
     "&7stop specific pet events from",
     "&7occurring when on/off claims"
+  ],
+
+  "plugin-support": [
+    {
+      "name": "GriefPrevention",
+      "url": "https://www.spigotmc.org/resources/1884/"
+    }
   ]
 }
