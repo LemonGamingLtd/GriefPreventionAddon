@@ -38,7 +38,7 @@ public class GriefPreventionAddon extends RegionModule {
         if (claim.isAdminClaim()) return Options.SPAWN_ADMIN_CLAIMS.getValue();
 
         // TODO: Claim is owned by player
-        if (claim.ownerID.equals(petUser.getOwnerUUID())) return Options.SPAWN_PERSONAL_CLAIMS.getValue();
+        if (petUser.getOwnerUUID().equals(claim.ownerID)) return Options.SPAWN_PERSONAL_CLAIMS.getValue();
 
         // TODO: Player is trusted in claim
         if (claim.managers.contains(petUser.getOwnerUUID().toString())) return Options.SPAWN_TRUSTED_CLAIMS.getValue();
@@ -63,7 +63,7 @@ public class GriefPreventionAddon extends RegionModule {
         if (claim.isAdminClaim()) return Options.MOVE_ADMIN_CLAIMS.getValue();
 
         // TODO: Claim is owned by player
-        if (claim.ownerID.equals(petUser.getOwnerUUID())) return Options.MOVE_PERSONAL_CLAIMS.getValue();
+        if (petUser.getOwnerUUID().equals(claim.ownerID)) return Options.MOVE_PERSONAL_CLAIMS.getValue();
 
         // TODO: Player is trusted in claim
         if (claim.managers.contains(petUser.getOwnerUUID().toString())) return Options.MOVE_TRUSTED_CLAIMS.getValue();
@@ -82,7 +82,7 @@ public class GriefPreventionAddon extends RegionModule {
         if (claim.isAdminClaim()) return Options.RIDE_ADMIN_CLAIMS.getValue();
 
         // TODO: Claim is owned by player
-        if (claim.ownerID.equals(petUser.getOwnerUUID())) return Options.RIDE_PERSONAL_CLAIMS.getValue();
+        if (petUser.getOwnerUUID().equals(claim.ownerID)) return Options.RIDE_PERSONAL_CLAIMS.getValue();
 
         // TODO: Player is trusted in claim
         if (claim.managers.contains(petUser.getOwnerUUID().toString())) return Options.RIDE_TRUSTED_CLAIMS.getValue();
@@ -101,7 +101,7 @@ public class GriefPreventionAddon extends RegionModule {
         if (claim.isAdminClaim()) return Options.MOUNT_ADMIN_CLAIMS.getValue();
 
         // TODO: Claim is owned by player
-        if (claim.ownerID.equals(petUser.getOwnerUUID())) return Options.MOUNT_PERSONAL_CLAIMS.getValue();
+        if (petUser.getOwnerUUID().equals(claim.ownerID)) return Options.MOUNT_PERSONAL_CLAIMS.getValue();
 
         // TODO: Player is trusted in claim
         if (claim.managers.contains(petUser.getOwnerUUID().toString())) return Options.MOUNT_TRUSTED_CLAIMS.getValue();
